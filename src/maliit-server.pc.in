@@ -1,0 +1,16 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=@CMAKE_INSTALL_PREFIX@
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
+datarootdir=${prefix}/@CMAKE_INSTALL_DATADIR@
+
+pluginsdir=${libdir}/maliit/plugins
+datadir=${datarootdir}
+pluginsdatadir=${datadir}/maliit/plugins
+
+Name: Maliit Server
+Description: Library for embedding the Maliit IM Server
+Version: @PROJECT_VERSION@
+Requires: maliit-framework maliit-plugins
+Cflags: -I${includedir}/maliit-2
+Libs: -L${libdir}
